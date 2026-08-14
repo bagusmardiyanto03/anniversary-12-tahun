@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Our Anniversary ❤️</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,sans-serif;color:#fff;background:#120713;overflow-x:hidden}
+section{min-height:auto;position:relative;display:flex;align-items:center;justify-content:center;padding:58px 20px}
+section.hero{min-height:100vh;padding:40px 20px}
+section:nth-of-type(2),section:nth-of-type(3),section:nth-of-type(4),section:nth-of-type(5),section:nth-of-type(6),section:nth-of-type(7),section:nth-of-type(8){min-height:82vh}
+.bg{position:fixed;inset:0;z-index:-3;background:linear-gradient(135deg,#180918,#4c123d,#170719)}
+.bg:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 20%,#ff4f9a33,transparent 25%),radial-gradient(circle at 80% 70%,#a855f733,transparent 30%)}
+#opening{
+ position:fixed;inset:0;z-index:100;
+ background:linear-gradient(135deg,#160817,#671344);
+ display:flex;flex-direction:column;align-items:center;justify-content:center;
+ text-align:center;padding:20px;transition:1s
+}
+#opening.hide{opacity:0;visibility:hidden;transform:scale(1.08)}
+.envelope{font-size:80px;animation:pulse 1.5s infinite}
+@keyframes pulse{50%{transform:scale(1.12)}}
+.script{font-family:"Great Vibes",cursive}
+.open-title{font-size:clamp(50px,10vw,100px);margin:12px 0}
+.open-sub{opacity:.8;margin:0 0 30px;max-width:600px}
+.btn{border:0;border-radius:50px;padding:14px 28px;background:#fff;color:#8d1858;font-weight:700;cursor:pointer;font-size:15px;transition:.25s;box-shadow:0 10px 30px #0005}
+.btn:hover{transform:translateY(-3px) scale(1.02)}
+.hero{text-align:center}
+.hero .small{letter-spacing:5px;font-size:13px;opacity:.75}
+.names{font-size:clamp(55px,11vw,120px);line-height:1.05;margin:15px 0}
+.amp{font-size:.5em;color:#ff9dca}
+.date{font-size:18px;letter-spacing:2px}
+}
+.wrap{max-width:1100px;width:100%}
+.title{text-align:center;font-size:clamp(35px,6vw,60px);margin-bottom:35px}
+.title:after{content:"";display:block;width:70px;height:3px;background:#ff8cc5;margin:12px auto;border-radius:5px}
+.card{background:#ffffff12;border:1px solid #ffffff20;backdrop-filter:blur(15px);border-radius:28px;padding:28px;box-shadow:0 20px 60px #0005}
+.story{text-align:center;line-height:2;max-width:800px;margin:auto}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gallery img{width:100%;height:230px;object-fit:cover;border-radius:20px;cursor:pointer;transition:.35s}
+.gallery img:hover{transform:scale(1.03) rotate(.5deg)}
+.timeline{max-width:750px;margin:auto}
+.item{display:grid;grid-template-columns:100px 1fr;gap:20px;margin:22px 0;align-items:start}
+.year{font-size:20px;font-weight:700;color:#ff9dcc;text-align:right}
+.item .box{border-left:2px solid #ff75b6;padding-left:22px}
+.item h3{margin-bottom:6px}
+.video{width:100%;border-radius:22px;background:#000;max-height:650px}
+.counter{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.counter .num{text-align:center;background:#0003;border-radius:20px;padding:22px}
+.counter b{font-size:40px;display:block}
+.counter span{font-size:11px;opacity:.7;letter-spacing:2px}
+.music{text-align:center}
+.music-icon{font-size:55px;margin-bottom:12px}
+#songName{margin:12px 0 20px;opacity:.8}
+.controls{display:flex;justify-content:center;flex-wrap:wrap;gap:8px}
+footer{text-align:center;padding:40px 20px;background:#09040b}
+.lightbox{display:none;position:fixed;z-index:200;inset:0;background:#000e;align-items:center;justify-content:center;padding:20px}
+.lightbox.show{display:flex}
+.lightbox img{max-width:95%;max-height:90%;border-radius:18px}
+.close{position:absolute;top:15px;right:25px;font-size:45px;cursor:pointer}
+.heart{position:fixed;bottom:-30px;z-index:1;pointer-events:none;animation:float 7s linear forwards}
+@keyframes float{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+.story-slider{
+ width:100%;
+ overflow:hidden;
+ margin:28px 0;
+ border-radius:22px;
+ padding:10px 0;
+ background:#0003;
+}
+.story-track{
+ display:flex;
+ width:max-content;
+ gap:14px;
+ animation:storyMove 28s linear infinite;
+}
+.story-track:hover{animation-play-state:paused}
+.story-track img{
+ width:190px;
+ height:240px;
+ object-fit:cover;
+ border-radius:18px;
+ flex-shrink:0;
+ box-shadow:0 8px 25px #0006;
+ transition:.3s;
+}
+.story-track img:hover{transform:scale(1.06);box-shadow:0 12px 35px #0008}
+@keyframes storyMove{
+ from{transform:translateX(0)}
+ to{transform:translateX(-50%)}
+}
+@media(max-width:700px){
+ .gallery{grid-template-columns:repeat(2,1fr)}
+ .gallery img{height:155px}
+ .counter{grid-template-columns:repeat(2,1fr)}
+ .item{grid-template-columns:65px 1fr}
+ .year{text-align:left;font-size:16px}
+ section{padding:55px 15px}
+}
+
+.section-nav{
+ position:absolute;left:0;right:0;bottom:20px;
+ display:flex;justify-content:space-between;padding:0 20px;
+ pointer-events:none;z-index:20
+}
+.section-arrow{
+ pointer-events:auto;width:52px;height:52px;border-radius:50%;
+ border:1px solid #ffffff45;background:#ffffff18;color:#fff;
+ font-size:32px;line-height:1;cursor:pointer;
+ backdrop-filter:blur(10px);box-shadow:0 8px 25px #0005;
+ transition:.25s;display:flex;align-items:center;justify-content:center
+}
+.section-arrow:hover{background:#ffffff35;transform:scale(1.08)}
+.section-arrow:disabled{opacity:.18;cursor:default;transform:none}
+@media(max-width:700px){
+ .section-nav{bottom:14px;padding:0 10px}
+ .section-arrow{width:44px;height:44px;font-size:27px}
+}
+
+
+
+.last-home{
+ min-height:auto;
+ padding:20px 20px 45px;
+ text-align:center;
+}
+.home-bottom{
+ font-size:15px;
+ padding:14px 30px;
+}
+
+/* Optimasi khusus REDMI Note 15 Pro portrait
+   Layar: 6.77", 2392 x 1080, rasio 20:9 */
+@media (max-width: 480px) {
+  body { width:100%; min-width:0; }
+  section { min-height:100svh !important; padding:42px 14px 78px !important; }
+  section.hero { min-height:100svh !important; padding:20px 14px !important; }
+  .wrap { width:100%; max-width:100%; }
+  .open-title { font-size:clamp(42px,12vw,64px); }
+  .envelope { font-size:64px; }
+  .names { font-size:clamp(48px,14vw,72px); }
+  .date { font-size:13px; letter-spacing:1.2px; }
+  .card { padding:18px; border-radius:20px; }
+  .title { font-size:38px; margin-bottom:24px; }
+  .story { font-size:14px; line-height:1.75; }
+  .story-track img { width:145px; height:190px; }
+  .gallery { grid-template-columns:repeat(2,1fr); gap:9px; }
+  .gallery img { height:165px; border-radius:14px; }
+  .item { grid-template-columns:55px 1fr; gap:12px; }
+  .item .box { padding-left:14px; }
+  .counter { grid-template-columns:repeat(2,1fr); gap:9px; }
+  .counter .num { padding:16px 8px; border-radius:15px; }
+  .counter b { font-size:30px; }
+  .video { max-height:60svh; }
+  .section-nav { bottom:14px; padding:0 8px; }
+  .section-arrow { width:44px; height:44px; font-size:27px; }
+  .btn { padding:12px 20px; font-size:14px; }
+  .music-icon { font-size:45px; }
+  footer { padding:30px 15px; }
+  .last-home { padding:15px 15px 35px !important; min-height:auto !important; }
+}
+
+.message-page{
+ min-height:82vh;
+ text-align:center;
+}
+.anniversary-message{
+ max-width:850px;
+ margin:auto;
+ padding:55px 30px;
+}
+.message-heart{
+ font-size:58px;
+ margin-bottom:10px;
+ animation:pulse 1.7s infinite;
+}
+.anniversary-message h2{
+ font-size:clamp(42px,7vw,72px);
+ color:#ffb4d7;
+ line-height:1.15;
+}
+.anniversary-message p{
+ font-size:clamp(18px,3vw,28px);
+ margin-top:22px;
+ line-height:1.6;
+}
+.message-divider{
+ font-size:34px;
+ color:#ff9dcc;
+ margin:20px 0 8px;
+}
+.anniversary-message small{
+ opacity:.7;
+ font-size:14px;
+}
+@media(max-width:480px){
+ .message-page{min-height:100svh !important;padding:42px 14px 78px !important}
+ .anniversary-message{padding:38px 20px}
+ .anniversary-message h2{font-size:42px}
+ .anniversary-message p{font-size:18px}
+}
+
+/* ===== OPTIMASI REDMI NOTE 12 =====
+   6.67 inch | 2400 x 1080 | 20:9 */
+@media (max-width:480px){
+  body{width:100%;min-width:0}
+  section{min-height:100svh!important;padding:42px 14px 78px!important}
+  section.hero{min-height:100svh!important;padding:20px 14px!important}
+  .wrap{width:100%;max-width:100%}
+  .open-title{font-size:clamp(42px,12vw,64px)}
+  .envelope{font-size:64px}
+  .names{font-size:clamp(48px,14vw,72px)}
+  .date{font-size:13px;letter-spacing:1.2px}
+  .card{padding:18px;border-radius:20px}
+  .title{font-size:38px;margin-bottom:24px}
+  .story{font-size:14px;line-height:1.75}
+  .story-track img{width:145px;height:190px}
+  .gallery{grid-template-columns:repeat(2,1fr);gap:9px}
+  .gallery img{height:165px;border-radius:14px}
+  .item{grid-template-columns:55px 1fr;gap:12px}
+  .item .box{padding-left:14px}
+  .counter{grid-template-columns:repeat(2,1fr);gap:9px}
+  .counter .num{padding:16px 8px;border-radius:15px}
+  .counter b{font-size:30px}
+  .video{max-height:60svh}
+  .section-nav{bottom:14px;padding:0 8px}
+  .section-arrow{width:44px;height:44px;font-size:27px}
+  .btn{padding:12px 20px;font-size:14px}
+  .music-icon{font-size:45px}
+  .anniversary-message h2{font-size:42px}
+  .anniversary-message p{font-size:18px}
+  .last-home{padding:15px 15px 35px!important;min-height:auto!important}
+}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<div id="opening">
+  <div class="envelope">💌</div>
+  <div class="script open-title">Our Anniversary</div>
+  <div class="open-sub">Ada sebuah cerita yang ingin dikenang...</div>
+  <button type="button" class="btn" onclick="openInvitation()">💖 Buka Kenangan</button>
+</div>
+
+<section class="hero">
+ <div>
+  <div class="small">SPECIAL ANNIVERSARY</div>
+  <div class="script names">Bagus <span class="amp">&</span> Nila</div>
+  <div class="date">22 AGUSTUS 2014 • SELAMANYA</div>
+  <div style="font-size:50px;margin-top:20px">❤️</div>
+ </div>
+
+
+  <div class="section-nav">
+   <button type="button" class="section-arrow prev-arrow" aria-label="Halaman sebelumnya">‹</button>
+   <button type="button" class="section-arrow next-arrow" aria-label="Halaman berikutnya">›</button>
+  </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <h2 class="title script">Sebuah Cerita</h2>
+  <div class="card story">
+   <p>
+    Setiap hubungan memiliki cerita. Ada tawa, ada tangis, ada perjalanan,
+    dan ada begitu banyak momen kecil yang akhirnya menjadi kenangan besar.
+   </p><br>
+
+   <div class="story-slider">
+    <div class="story-track">
+     <img src="foto1.jpg" alt="Cerita 1">
+     <img src="foto2.jpg" alt="Cerita 2">
+     <img src="foto3.jpg" alt="Cerita 3">
+     <img src="foto4.jpg" alt="Cerita 4">
+     <img src="foto5.jpg" alt="Cerita 5">
+     <img src="foto6.jpg" alt="Cerita 6">
+     <img src="foto1.jpg" alt="Cerita 1">
+     <img src="foto2.jpg" alt="Cerita 2">
+     <img src="foto3.jpg" alt="Cerita 3">
+     <img src="foto4.jpg" alt="Cerita 4">
+    </div>
+   </div>
+
+   <p>
+    Terima kasih telah menjadi bagian dari perjalanan ini.
+    Semoga hari ini menjadi pengingat bahwa masih banyak cerita indah
+    yang akan kita tulis bersama.
+   </p><br>
+   <strong>Happy Anniversary ❤️</strong>
+  </div>
+ </div>
+
+  <div class="section-nav">
+   <button type="button" class="section-arrow prev-arrow" aria-label="Halaman sebelumnya">‹</button>
+   <button type="button" class="section-arrow next-arrow" aria-label="Halaman berikutnya">›</button>
+  </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <h2 class="title script">Kenangan Kita</h2>
+  <div class="card gallery">
+   <img src="foto1.jpg" onclick="zoom(this.src)" alt="Kenangan 1">
+   <img src="foto2.jpg" onclick="zoom(this.src)" alt="Kenangan 2">
+   <img src="foto3.jpg" onclick="zoom(this.src)" alt="Kenangan 3">
+   <img src="foto4.jpg" onclick="zoom(this.src)" alt="Kenangan 4">
+   <img src="foto5.jpg" onclick="zoom(this.src)" alt="Kenangan 5">
+   <img src="foto6.jpg" onclick="zoom(this.src)" alt="Kenangan 6">
+  </div>
+ </div>
+
+  <div class="section-nav">
+   <button type="button" class="section-arrow prev-arrow" aria-label="Halaman sebelumnya">‹</button>
+   <button type="button" class="section-arrow next-arrow" aria-label="Halaman berikutnya">›</button>
+  </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <h2 class="title script">Perjalanan Kita</h2>
+  <div class="card timeline">
+   <div class="item"><div class="year">2014</div><div class="box"><h3>❤️ Awal Yang Manis</h3><p>Layar cerita kita dimulai di sini. Dua orang asing yang canggung, mencoba meleburkan ego menjadi satu detak yang sama.</p></div></div>
+   
+   <div class="item"><div class="year">2016</div><div class="box"><h3>❤️ Bahasa Rahasia</h3><p>Adegan bergulir tanpa banyak dialog. Cukup satu tatapan mata, kita sudah tahu cara saling menguatkan di tengah keramaian.</p></div></div>
+   
+   <div class="item"><div class="year">2019</div><div class="box"><h3>❤️ Rumah Yang Teduh</h3><p>Cerita beralih ke ruang tengah yang hangat. Tempat di mana lelahnya dunia luar langsung menguap dalam satu dekapan sunyi.</p></div></div>
+     
+   <div class="item"><div class="year">2022</div><div class="box"><h3>❤️ Bertahan dari Badai</h3><p>Setengah dekade melatih kita di bawah satu payung basah. Kita berhenti menuntut sempurna dan mulai mencintai setiap retakan.</p></div></div>
+   
+   <div class="item"><div class="year">2024</div><div class="box"><h3>❤️ Puncak Dekade</h3><p>Satu dekade penuh rasa syukur. Kita berdiri bersama, menoleh ke belakang, dan bangga melihat jalan berliku yang berhasil kita lalui.</p></div></div>
+   
+   <div class="item"><div class="year">2026</div><div class="box"><h3>❤️ Teman Sejati</h3><p>Ego luruh menjadi kedamaian, menatap masa depan bersama sahabat terbaik yang jiwanya telah menyatu.</p></div></div>
+  </div>
+ </div>
+
+  <div class="section-nav">
+   <button type="button" class="section-arrow prev-arrow" aria-label="Halaman sebelumnya">‹</button>
+   <button type="button" class="section-arrow next-arrow" aria-label="Halaman berikutnya">›</button>
+  </div>
+</section>
+
+
+<section>
+ <div class="wrap">
+  <h2 class="title script">Video Kenangan</h2>
+  <div class="card">
+   <video class="video" id="memoryVideo" controls poster="foto1.jpg">
+    <source src="video.mp4" type="video/mp4">
+   </video>
+  </div>
+ </div>
+
+  <div class="section-nav">
+   <button type="button" class="section-arrow prev-arrow" aria-label="Halaman sebelumnya">‹</button>
+   <button type="button" class="section-arrow next-arrow" aria-label="Halaman berikutnya">›</button>
+  </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <h2 class="title script">Waktu yang Kita Lewati</h2>
+  <div class="card counter">
+   <div class="num"><b id="d">0</b><span>HARI</span></div>
+   <div class="num"><b id="h">0</b><span>JAM</span></div>
+   <div class="num"><b id="m">0</b><span>MENIT</span></div>
+   <div class="num"><b id="s">0</b><span>DETIK</span></div>
+  </div>
+ </div>
+
+  <div class="section-nav">
+   <button type="button" class="section-arrow prev-arrow" aria-label="Halaman sebelumnya">‹</button>
+   <button type="button" class="section-arrow next-arrow" aria-label="Halaman berikutnya">›</button>
+  </div>
+</section>
+
+<section class="message-page">
+ <div class="wrap">
+  <div class="card anniversary-message">
+   <div class="message-heart">❤️</div>
+   <h2 class="script">Selamat hari pernikahan ke-12</h2>
+   <p>Terima kasih selalu menjadi rumah terbaikku.</p>
+   <div class="message-divider">♡</div>
+   <small>12 tahun bersama, dan semoga selamanya. ❤️</small>
+  </div>
+  <div class="section-nav">
+   <button type="button" class="section-arrow prev-arrow" aria-label="Halaman sebelumnya">‹</button>
+   <button type="button" class="section-arrow next-arrow" aria-label="Halaman berikutnya">›</button>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <h2 class="title script">Musik Untuk Kita</h2>
+  <div class="card music">
+   <div class="music-icon">🎵</div>
+   <h3 id="songName">Musik Anniversary</h3>
+   <div class="controls">
+    <button type="button" class="btn" onclick="playPause()" id="play">▶ Play</button>
+    <button type="button" class="btn" onclick="prevSong()">⏮ Sebelumnya</button>
+    <button type="button" class="btn" onclick="nextSong()">⏭ Berikutnya</button>
+   </div>
+   <audio id="audio"></audio>
+  </div>
+ </div>
+
+  <div class="section-nav">
+   <button type="button" class="section-arrow prev-arrow" aria-label="Halaman sebelumnya">‹</button>
+   <button type="button" class="section-arrow next-arrow" aria-label="Halaman berikutnya">›</button>
+  </div>
+</section>
+
+
+<section class="last-home">
+ <div class="wrap">
+  <button type="button" class="btn home-bottom" onclick="goHome()">↑ Kembali ke Tampilan Awal</button>
+ </div>
+</section>
+
+<footer>
+ <div class="script" style="font-size:45px">Forever & Always ❤️</div>
+ <p style="margin-top:10px;opacity:.6">Dibuat dengan cinta</p>
+</footer>
+
+<div class="lightbox" id="lightbox" onclick="closeZoom()">
+ <span class="close">&times;</span><img id="zoomImg">
+</div>
+
+<script>
+/* ====== PENGATURAN UTAMA ======
+   Foto yang digunakan: foto1.jpg sampai foto6.jpg
+*/
+const anniversary = "2014-08-22T00:00:00";
+
+/* Ganti file musik di sini */
+const songs=[
+ {name:"Lagu Anniversary 1",file:"musik1.mp3"},
+ {name:"Lagu Anniversary 2",file:"musik2.mp3"},
+];
+
+let index=0;
+const audio=document.getElementById("audio");
+const play=document.getElementById("play");
+const songName=document.getElementById("songName");
+
+function loadSong(i,autoplay=false){
+ index=(i+songs.length)%songs.length;
+ audio.src=songs[index].file;
+ songName.textContent=songs[index].name;
+ if(autoplay) audio.play().then(()=>play.textContent="⏸ Pause").catch(()=>{});
+}
+function openInvitation(){
+ document.getElementById("opening").classList.add("hide");
+ loadSong(0,true);
+}
+function playPause(){
+ if(audio.paused){
+  if(!audio.src)loadSong(0);
+  audio.play().then(()=>play.textContent="⏸ Pause").catch(()=>{});
+ }else{
+  audio.pause();play.textContent="▶ Play";
+ }
+}
+function nextSong(){loadSong(index+1,true)}
+function prevSong(){loadSong(index-1,true)}
+audio.addEventListener("ended",nextSong);
+
+const memoryVideo = document.getElementById("memoryVideo");
+
+/* Saat video dimainkan, musik background langsung berhenti */
+memoryVideo.addEventListener("play",()=>{
+ audio.pause();
+ play.textContent="▶ Play";
+});
+
+/* Saat video selesai, musik background berjalan lagi */
+memoryVideo.addEventListener("ended",()=>{
+ audio.play().then(()=>{
+   play.textContent="⏸ Pause";
+ }).catch(()=>{
+   play.textContent="▶ Play";
+ });
+});
+
+
+/* Setelah video kedua selesai, musik berjalan lagi */
+memoryVideo2.addEventListener("ended",()=>{
+ audio.play().then(()=>{
+   play.textContent="⏸ Pause";
+ }).catch(()=>{
+   play.textContent="▶ Play";
+ });
+});
+
+
+/* ===== NAVIGASI SECTION ===== */
+const pages = Array.from(document.querySelectorAll("section"));
+let currentPage = 0;
+let isNavigating = false;
+
+function pageTop(page) {
+  return page.getBoundingClientRect().top + window.scrollY;
+}
+
+function goToPage(n) {
+  currentPage = Math.max(0, Math.min(pages.length - 1, n));
+  isNavigating = true;
+
+  window.scrollTo({
+    top: pageTop(pages[currentPage]),
+    behavior: "smooth"
+  });
+
+  updateSectionArrows();
+  setTimeout(() => { isNavigating = false; }, 800);
+}
+
+function updateSectionArrows() {
+  pages.forEach((page, i) => {
+    const prev = page.querySelector(".prev-arrow");
+    const next = page.querySelector(".next-arrow");
+
+    if (prev) prev.disabled = (i === 0);
+    if (next) next.disabled = (i === pages.length - 1);
+  });
+}
+
+function goHome() {
+  currentPage = 0;
+  isNavigating = true;
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+  updateSectionArrows();
+  setTimeout(() => { isNavigating = false; }, 800);
+}
+
+function nextPage() {
+  goToPage(currentPage + 1);
+}
+
+function prevPage() {
+  goToPage(currentPage - 1);
+}
+
+/* Tombol panah */
+document.querySelectorAll(".next-arrow").forEach(button => {
+  button.addEventListener("click", function(e) {
+    e.preventDefault();
+    nextPage();
+  });
+});
+
+document.querySelectorAll(".prev-arrow").forEach(button => {
+  button.addEventListener("click", function(e) {
+    e.preventDefault();
+    prevPage();
+  });
+});
+
+/* Deteksi section saat pengguna scroll manual */
+window.addEventListener("scroll", function() {
+  if (isNavigating) return;
+
+  let nearest = 0;
+  let nearestDistance = Infinity;
+
+  pages.forEach((page, i) => {
+    const distance = Math.abs(page.getBoundingClientRect().top);
+    if (distance < nearestDistance) {
+      nearestDistance = distance;
+      nearest = i;
+    }
+  });
+
+  currentPage = nearest;
+  updateSectionArrows();
+}, { passive: true });
+
+updateSectionArrows();
+
+function update(){
+  const start = new Date(anniversary).getTime();
+  let diff = Math.max(0, Date.now() - start);
+
+  const d = Math.floor(diff / 86400000);
+  diff %= 86400000;
+
+  const h = Math.floor(diff / 3600000);
+  diff %= 3600000;
+
+  const m = Math.floor(diff / 60000);
+  diff %= 60000;
+
+  const s = Math.floor(diff / 1000);
+
+  const elD = document.getElementById("d");
+  const elH = document.getElementById("h");
+  const elM = document.getElementById("m");
+  const elS = document.getElementById("s");
+
+  if (elD) elD.textContent = d;
+  if (elH) elH.textContent = h;
+  if (elM) elM.textContent = m;
+  if (elS) elS.textContent = s;
+}
+
+update();
+setInterval(update, 1000);
+
+function zoom(src){
+ document.getElementById("zoomImg").src=src;
+ document.getElementById("lightbox").classList.add("show");
+}
+function closeZoom(){document.getElementById("lightbox").classList.remove("show")}
+
+/* Efek hati */
+setInterval(()=>{
+ const x=document.createElement("div");
+ x.className="heart";
+ x.textContent=["❤️","💕","💖","💗","✨"][Math.floor(Math.random()*5)];
+ x.style.left=Math.random()*100+"vw";
+ x.style.fontSize=(15+Math.random()*25)+"px";
+ document.body.appendChild(x);
+ setTimeout(()=>x.remove(),7000);
+},700);
+</script>
+</body>
+</html>
