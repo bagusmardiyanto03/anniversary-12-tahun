@@ -252,11 +252,11 @@ footer{text-align:center;padding:40px 20px;background:#09040b}
   <div class="date">22 AGUSTUS 2014 • SELAMANYA</div>
   <div style="font-size:50px;margin-top:20px">❤️</div>
  </div>
-
+ <button class="scroll" onclick="nextPage()">↓</button>
 
   <div class="section-nav">
-   <button type="button" class="section-arrow prev-arrow" aria-label="Halaman sebelumnya">‹</button>
-   <button type="button" class="section-arrow next-arrow" aria-label="Halaman berikutnya">›</button>
+   <button class="section-arrow prev-arrow" onclick="prevPage()" aria-label="Halaman sebelumnya">‹</button>
+   <button class="section-arrow next-arrow" onclick="nextPage()" aria-label="Halaman berikutnya">›</button>
   </div>
 </section>
 
@@ -277,6 +277,8 @@ footer{text-align:center;padding:40px 20px;background:#09040b}
      <img src="foto4.jpg" alt="Cerita 4">
      <img src="foto5.jpg" alt="Cerita 5">
      <img src="foto6.jpg" alt="Cerita 6">
+     <img src="foto7.jpg" alt="Cerita 7">
+     <img src="foto8.jpg" alt="Cerita 8">
      <img src="foto1.jpg" alt="Cerita 1">
      <img src="foto2.jpg" alt="Cerita 2">
      <img src="foto3.jpg" alt="Cerita 3">
@@ -294,8 +296,8 @@ footer{text-align:center;padding:40px 20px;background:#09040b}
  </div>
 
   <div class="section-nav">
-   <button type="button" class="section-arrow prev-arrow" aria-label="Halaman sebelumnya">‹</button>
-   <button type="button" class="section-arrow next-arrow" aria-label="Halaman berikutnya">›</button>
+   <button class="section-arrow prev-arrow" onclick="prevPage()" aria-label="Halaman sebelumnya">‹</button>
+   <button class="section-arrow next-arrow" onclick="nextPage()" aria-label="Halaman berikutnya">›</button>
   </div>
 </section>
 
@@ -309,12 +311,14 @@ footer{text-align:center;padding:40px 20px;background:#09040b}
    <img src="foto4.jpg" onclick="zoom(this.src)" alt="Kenangan 4">
    <img src="foto5.jpg" onclick="zoom(this.src)" alt="Kenangan 5">
    <img src="foto6.jpg" onclick="zoom(this.src)" alt="Kenangan 6">
+   <img src="foto7.jpg" onclick="zoom(this.src)" alt="Kenangan 7">
+   <img src="foto8.jpg" onclick="zoom(this.src)" alt="Kenangan 8">
   </div>
  </div>
 
   <div class="section-nav">
-   <button type="button" class="section-arrow prev-arrow" aria-label="Halaman sebelumnya">‹</button>
-   <button type="button" class="section-arrow next-arrow" aria-label="Halaman berikutnya">›</button>
+   <button class="section-arrow prev-arrow" onclick="prevPage()" aria-label="Halaman sebelumnya">‹</button>
+   <button class="section-arrow next-arrow" onclick="nextPage()" aria-label="Halaman berikutnya">›</button>
   </div>
 </section>
 
@@ -337,11 +341,26 @@ footer{text-align:center;padding:40px 20px;background:#09040b}
  </div>
 
   <div class="section-nav">
-   <button type="button" class="section-arrow prev-arrow" aria-label="Halaman sebelumnya">‹</button>
-   <button type="button" class="section-arrow next-arrow" aria-label="Halaman berikutnya">›</button>
+   <button class="section-arrow prev-arrow" onclick="prevPage()" aria-label="Halaman sebelumnya">‹</button>
+   <button class="section-arrow next-arrow" onclick="nextPage()" aria-label="Halaman berikutnya">›</button>
   </div>
 </section>
 
+<section>
+ <div class="wrap">
+   <h2 class="title script">Video Kenangan</h2>
+  <div class="card">
+   <video class="video" id="memoryVideo2" controls poster="foto7.jpg">
+    <source src="video2.mp4" type="video/mp4">
+   </video>
+  </div>
+ </div>
+
+  <div class="section-nav">
+   <button class="section-arrow prev-arrow" onclick="prevPage()" aria-label="Halaman sebelumnya">‹</button>
+   <button class="section-arrow next-arrow" onclick="nextPage()" aria-label="Halaman berikutnya">›</button>
+  </div>
+</section>
 
 <section>
  <div class="wrap">
@@ -354,8 +373,8 @@ footer{text-align:center;padding:40px 20px;background:#09040b}
  </div>
 
   <div class="section-nav">
-   <button type="button" class="section-arrow prev-arrow" aria-label="Halaman sebelumnya">‹</button>
-   <button type="button" class="section-arrow next-arrow" aria-label="Halaman berikutnya">›</button>
+   <button class="section-arrow prev-arrow" onclick="prevPage()" aria-label="Halaman sebelumnya">‹</button>
+   <button class="section-arrow next-arrow" onclick="nextPage()" aria-label="Halaman berikutnya">›</button>
   </div>
 </section>
 
@@ -371,8 +390,8 @@ footer{text-align:center;padding:40px 20px;background:#09040b}
  </div>
 
   <div class="section-nav">
-   <button type="button" class="section-arrow prev-arrow" aria-label="Halaman sebelumnya">‹</button>
-   <button type="button" class="section-arrow next-arrow" aria-label="Halaman berikutnya">›</button>
+   <button class="section-arrow prev-arrow" onclick="prevPage()" aria-label="Halaman sebelumnya">‹</button>
+   <button class="section-arrow next-arrow" onclick="nextPage()" aria-label="Halaman berikutnya">›</button>
   </div>
 </section>
 
@@ -386,8 +405,8 @@ footer{text-align:center;padding:40px 20px;background:#09040b}
    <small>12 tahun bersama, dan semoga selamanya. ❤️</small>
   </div>
   <div class="section-nav">
-   <button type="button" class="section-arrow prev-arrow" aria-label="Halaman sebelumnya">‹</button>
-   <button type="button" class="section-arrow next-arrow" aria-label="Halaman berikutnya">›</button>
+   <button class="section-arrow prev-arrow" onclick="prevPage()" aria-label="Halaman sebelumnya">‹</button>
+   <button class="section-arrow next-arrow" onclick="nextPage()" aria-label="Halaman berikutnya">›</button>
   </div>
  </div>
 </section>
@@ -408,8 +427,8 @@ footer{text-align:center;padding:40px 20px;background:#09040b}
  </div>
 
   <div class="section-nav">
-   <button type="button" class="section-arrow prev-arrow" aria-label="Halaman sebelumnya">‹</button>
-   <button type="button" class="section-arrow next-arrow" aria-label="Halaman berikutnya">›</button>
+   <button class="section-arrow prev-arrow" onclick="prevPage()" aria-label="Halaman sebelumnya">‹</button>
+   <button class="section-arrow next-arrow" onclick="nextPage()" aria-label="Halaman berikutnya">›</button>
   </div>
 </section>
 
@@ -431,7 +450,7 @@ footer{text-align:center;padding:40px 20px;background:#09040b}
 
 <script>
 /* ====== PENGATURAN UTAMA ======
-   Foto yang digunakan: foto1.jpg sampai foto6.jpg
+   Foto yang digunakan: foto1.jpg sampai foto12.jpg
 */
 const anniversary = "2014-08-22T00:00:00";
 
@@ -439,6 +458,7 @@ const anniversary = "2014-08-22T00:00:00";
 const songs=[
  {name:"Lagu Anniversary 1",file:"musik1.mp3"},
  {name:"Lagu Anniversary 2",file:"musik2.mp3"},
+ {name:"Lagu Anniversary 3",file:"musik3.mp3"}
 ];
 
 let index=0;
@@ -469,6 +489,7 @@ function prevSong(){loadSong(index-1,true)}
 audio.addEventListener("ended",nextSong);
 
 const memoryVideo = document.getElementById("memoryVideo");
+const memoryVideo2 = document.getElementById("memoryVideo2");
 
 /* Saat video dimainkan, musik background langsung berhenti */
 memoryVideo.addEventListener("play",()=>{
@@ -485,6 +506,11 @@ memoryVideo.addEventListener("ended",()=>{
  });
 });
 
+/* Video kedua juga mematikan musik saat dimainkan */
+memoryVideo2.addEventListener("play",()=>{
+ audio.pause();
+ play.textContent="▶ Play";
+});
 
 /* Setelah video kedua selesai, musik berjalan lagi */
 memoryVideo2.addEventListener("ended",()=>{
@@ -496,123 +522,60 @@ memoryVideo2.addEventListener("ended",()=>{
 });
 
 
-/* ===== NAVIGASI SECTION ===== */
-const pages = Array.from(document.querySelectorAll("section"));
-let currentPage = 0;
-let isNavigating = false;
+/* Navigasi antar halaman/section dengan tombol panah */
+const pages=[...document.querySelectorAll("section")];
+let currentPage=0;
 
-function pageTop(page) {
-  return page.getBoundingClientRect().top + window.scrollY;
+function goToPage(n){
+ currentPage=Math.max(0,Math.min(pages.length-1,n));
+ pages[currentPage].scrollIntoView({behavior:"smooth",block:"start"});
+ updateSectionArrows();
 }
 
-function goToPage(n) {
-  currentPage = Math.max(0, Math.min(pages.length - 1, n));
-  isNavigating = true;
-
-  window.scrollTo({
-    top: pageTop(pages[currentPage]),
-    behavior: "smooth"
-  });
-
-  updateSectionArrows();
-  setTimeout(() => { isNavigating = false; }, 800);
+function updateSectionArrows(){
+ pages.forEach((page,i)=>{
+  const prev=page.querySelector(".prev-arrow");
+  const next=page.querySelector(".next-arrow");
+  if(prev) prev.disabled=(i===0);
+  if(next) next.disabled=(i===pages.length-1);
+ });
 }
 
-function updateSectionArrows() {
-  pages.forEach((page, i) => {
-    const prev = page.querySelector(".prev-arrow");
-    const next = page.querySelector(".next-arrow");
 
-    if (prev) prev.disabled = (i === 0);
-    if (next) next.disabled = (i === pages.length - 1);
-  });
+function goHome(){
+ window.scrollTo({top:0,behavior:"smooth"});
+ currentPage=0;
+ updateSectionArrows();
 }
 
-function goHome() {
-  currentPage = 0;
-  isNavigating = true;
+function nextPage(){goToPage(currentPage+1)}
+function prevPage(){goToPage(currentPage-1)}
 
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
 
-  updateSectionArrows();
-  setTimeout(() => { isNavigating = false; }, 800);
-}
 
-function nextPage() {
-  goToPage(currentPage + 1);
-}
-
-function prevPage() {
-  goToPage(currentPage - 1);
-}
-
-/* Tombol panah */
-document.querySelectorAll(".next-arrow").forEach(button => {
-  button.addEventListener("click", function(e) {
-    e.preventDefault();
-    nextPage();
-  });
+window.addEventListener("scroll",()=>{
+ let best=0,bestDistance=Infinity;
+ pages.forEach((page,i)=>{
+  const distance=Math.abs(page.getBoundingClientRect().top);
+  if(distance<bestDistance){bestDistance=distance;best=i;}
+ });
+ currentPage=best;
+ updateSectionArrows();
 });
-
-document.querySelectorAll(".prev-arrow").forEach(button => {
-  button.addEventListener("click", function(e) {
-    e.preventDefault();
-    prevPage();
-  });
-});
-
-/* Deteksi section saat pengguna scroll manual */
-window.addEventListener("scroll", function() {
-  if (isNavigating) return;
-
-  let nearest = 0;
-  let nearestDistance = Infinity;
-
-  pages.forEach((page, i) => {
-    const distance = Math.abs(page.getBoundingClientRect().top);
-    if (distance < nearestDistance) {
-      nearestDistance = distance;
-      nearest = i;
-    }
-  });
-
-  currentPage = nearest;
-  updateSectionArrows();
-}, { passive: true });
-
 updateSectionArrows();
 
 function update(){
-  const start = new Date(anniversary).getTime();
-  let diff = Math.max(0, Date.now() - start);
-
-  const d = Math.floor(diff / 86400000);
-  diff %= 86400000;
-
-  const h = Math.floor(diff / 3600000);
-  diff %= 3600000;
-
-  const m = Math.floor(diff / 60000);
-  diff %= 60000;
-
-  const s = Math.floor(diff / 1000);
-
-  const elD = document.getElementById("d");
-  const elH = document.getElementById("h");
-  const elM = document.getElementById("m");
-  const elS = document.getElementById("s");
-
-  if (elD) elD.textContent = d;
-  if (elH) elH.textContent = h;
-  if (elM) elM.textContent = m;
-  if (elS) elS.textContent = s;
+ let diff=Math.max(0,Date.now()-new Date(anniversary).getTime());
+ let d=Math.floor(diff/86400000);diff%=86400000;
+ let h=Math.floor(diff/3600000);diff%=3600000;
+ let m=Math.floor(diff/60000);diff%=60000;
+ let s=Math.floor(diff/1000);
+ document.getElementById("d").textContent=d;
+ document.getElementById("h").textContent=h;
+ document.getElementById("m").textContent=m;
+ document.getElementById("s").textContent=s;
 }
-
-update();
-setInterval(update, 1000);
+setInterval(update,1000);update();
 
 function zoom(src){
  document.getElementById("zoomImg").src=src;
